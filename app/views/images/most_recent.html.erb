@@ -1,5 +1,7 @@
+<h1> Most Recent </h1>
+
 <ul>
 <% @images.each do |img| %>
-    <li><%= link_to(img.title, image_path(img)) %> <%= img.uploaded_at %></li>
+    <li><%= link_to(img.title, image_path(img)) %> - <%= img.uploaded_at %></li>
 <% end %>
 </ul>
