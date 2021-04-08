@@ -1,0 +1,13 @@
+<h1> EDIT A IMAGE </h1>
+
+<%= form_with(model: @image) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+    <%= f.submit 'Update Image' %>
+<% end %>
+
+<%= link_to "DELETE IMAGE", image_path(@image), method: "delete" %>

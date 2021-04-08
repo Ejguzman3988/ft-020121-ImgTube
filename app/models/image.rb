@@ -1,5 +1,6 @@
 class Image < ApplicationRecord
-
+    validates :title, presence: true
+    # TODO: THIS DOESNT WORK BRO
     def self.search(query)
         self.where("title like %?%", query)
     end

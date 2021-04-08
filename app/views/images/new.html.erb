@@ -1,0 +1,45 @@
+<h1> Create new Image </h1>
+
+<form action='/images' method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <label for="image[title]">Title:</label>
+    <input name="image[title]">
+    <label for="image[description]">Description:</label>
+    <input name="image[description]">
+    <label for="image[image_url]">Image Url:</label>
+    <input name="image[image_url]">
+    <input type="submit" value="Create Image">
+
+</form>
+
+<h1> --------------- Form Tag -------------------- </h1>
+<%= form_tag(images_path) do %>
+    <%= label_tag :title %>
+    <%= text_field_tag :title %>
+    <%= label_tag :description %>
+    <%= text_field_tag :description %>
+    <%= label_tag :image_url %>
+    <%= text_field_tag :image_url %>
+    <%= submit_tag('Create Image') %>
+<% end %>
+<h1> --------------- Form For -------------------- </h1>
+<%= form_for @image do |f| %>
+    <%= f.label(:title) %>
+    <%= f.text_field :title %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+    <%= f.submit 'Create Image' %>
+<% end %>
+
+<h1> --------------- Form With -------------------- </h1>
+<%= form_with(model: @image) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+    <%= f.submit 'Create Image' %>
+<% end %>
