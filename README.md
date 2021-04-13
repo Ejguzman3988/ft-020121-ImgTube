@@ -5,6 +5,7 @@
 - Quickly update search function
 - Where should we validate? Why?
 - Use AR validations guide to add standard Validations
+    - https://guides.rubyonrails.org/active_record_validations.html
 - Display Error Messages using '.errors'
 - Create custom validations
 
