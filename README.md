@@ -1,17 +1,19 @@
 # ImgTube
 
+Img Tube is a YouTube clone used to practice creating a rails project. 
+
 ### **Deliverables**
-- Review a bit about routes
-- Quickly update search function
+4.13.21
+---
+- Review:
+    - routes
+    - Quickly update search function
+**Main Focus for today**
 - Where should we validate? Why?
 - Use AR validations guide to add standard Validations
     - https://guides.rubyonrails.org/active_record_validations.html
 - Display Error Messages using '.errors'
 - Create custom validations
-
-Img Tube is a YouTube clone used to practice creating a rails project. 
-
-Using the helper -> changing the url better if have helper
 
 ## Rails CRUD
 4.8.21
