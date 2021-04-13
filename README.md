@@ -9,6 +9,8 @@ Img Tube is a YouTube clone used to practice creating a rails project.
 - Review:
     - routes
     - Quickly update search function
+        - https://guides.rubyonrails.org/active_record_querying.html
+        - https://www.sqlite.org/fts3.html
 **Main Focus for today**
 - Where should we validate? Why?
 - Use AR validations guide to add standard Validations
