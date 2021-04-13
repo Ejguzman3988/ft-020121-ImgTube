@@ -1,9 +1,9 @@
-# ImgTube
+# ImgTube - 4.13.21
 
 Img Tube is a YouTube clone used to practice creating a rails project. 
 
 ### **Deliverables**
-4.13.21
+
 ---
 - Review:
     - routes
@@ -15,8 +15,8 @@ Img Tube is a YouTube clone used to practice creating a rails project.
 - Display Error Messages using '.errors'
 - Create custom validations
 
-## Rails CRUD
-4.8.21
+## Rails CRUD - 4.8.21
+
 ---
 ### **Deliverables**
 * Add Nav Bar
@@ -32,8 +32,7 @@ Img Tube is a YouTube clone used to practice creating a rails project.
 * Manipulate DateTime Object
 
 ---
-## Rails Models And Restful Routing
-4.7.21
+## Rails Models And Restful Routing - 4.7.21
 ---
 ### **Deliverables**
 * Make a migration for image
