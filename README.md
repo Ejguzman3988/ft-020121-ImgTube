@@ -1,5 +1,13 @@
 # ImgTube
 
+### **Deliverables**
+- Review a bit about routes
+- Quickly update search function
+- Where should we validate? Why?
+- Use AR validations guide to add standard Validations
+- Display Error Messages using '.errors'
+- Create custom validations
+
 Img Tube is a YouTube clone used to practice creating a rails project. 
 
 Using the helper -> changing the url better if have helper
