@@ -17,6 +17,9 @@ Rails.application.routes.draw do
 
   #custom route                     
   get '/most_recent', to: 'images#most_recent', as: 'recent'
+  get '/search', to: 'images#search', as: 'search'
+  # as: 'recent' => recent_path
+  # recent_path = '/most_recent'
 
 
 
