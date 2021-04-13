@@ -2,6 +2,8 @@
 
 Img Tube is a YouTube clone used to practice creating a rails project. 
 
+Using the helper -> changing the url better if have helper
+
 ## Rails CRUD
 4.8.21
 ---

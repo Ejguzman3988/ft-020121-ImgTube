@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+    
     def most_recent
         @images = Image.most_recent
     end
@@ -16,7 +17,7 @@ class ImagesController < ApplicationController
     end
 
     def create
-        @image = Image.new(images_params)
+        @image = Image.new(image_params)
         if @image.save
             redirect_to image_path(@image)
         else
