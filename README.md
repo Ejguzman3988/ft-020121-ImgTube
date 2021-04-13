@@ -2,10 +2,30 @@
 
 Img Tube is a YouTube clone used to practice creating a rails project. 
 
-Using the helper -> changing the url better if have helper
+## Rails Validations - 4.13.21
+---
 
-## Rails CRUD
-4.8.21
+### **Deliverables**
+- Review:
+    - routes
+    - Quickly update search function
+        - https://guides.rubyonrails.org/active_record_querying.html
+        - https://www.sqlite.org/fts3.html
+
+
+
+- **Main Focus for today**
+- Where should we validate? Why?
+    - model **
+    - views
+    - controller
+- Use AR validations guide to add standard Validations
+    - https://guides.rubyonrails.org/active_record_validations.html
+- Display Error Messages using '.errors'
+- Create custom validations
+
+## Rails CRUD - 4.8.21
+
 ---
 ### **Deliverables**
 * Add Nav Bar
@@ -21,8 +41,7 @@ Using the helper -> changing the url better if have helper
 * Manipulate DateTime Object
 
 ---
-## Rails Models And Restful Routing
-4.7.21
+## Rails Models And Restful Routing - 4.7.21
 ---
 ### **Deliverables**
 * Make a migration for image

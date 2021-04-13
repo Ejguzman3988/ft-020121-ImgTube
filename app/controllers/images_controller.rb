@@ -1,5 +1,10 @@
 class ImagesController < ApplicationController
-    
+
+    def search
+        @images = Image.search(params[:title])
+        render :index
+    end
+
     def most_recent
         @images = Image.most_recent
     end
@@ -10,6 +15,7 @@ class ImagesController < ApplicationController
 
     def show
         @image = Image.find_by(id: params[:id])
+        @image.update(views: @image.views+1)
     end
     
     def new
@@ -18,6 +24,7 @@ class ImagesController < ApplicationController
 
     def create
         @image = Image.new(image_params)
+
         if @image.save
             redirect_to image_path(@image)
         else
@@ -25,6 +32,7 @@ class ImagesController < ApplicationController
             # If it doesnt save
             # @image.errors
             # TODO: add some flash messaging
+
             render :new
         end
     end

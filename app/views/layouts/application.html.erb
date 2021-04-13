@@ -24,16 +24,16 @@
             <a class="nav-link active" aria-current="page" href="/images">Home</a>
           </li>
           <li>
-            <%= link_to 'Create New Movie', new_image_path, class: 'nav-link active' %>
+            <%= link_to 'Create New Image', new_image_path, class: 'nav-link active' %>
           </li>
           <li>
-            <%= link_to 'Most Recent', recent_path, class: 'nav-link active' %>
+            <%= link_to 'Most Recent PATH', recent_path, class: 'nav-link active' %>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <%= form_with(url: search_path, method: 'get', class: 'd-flex') do |f|%>
+          <%= f.text_field :title, class: "form-control me-2", placeholder: "Search for Title" %>
+          <%= f.submit :Search, class: "btn btn-outline-success" %>
+        <% end %>
       </div>
     </div>
   </nav>
