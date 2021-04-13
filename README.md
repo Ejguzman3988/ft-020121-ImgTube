@@ -1,10 +1,11 @@
-# ImgTube - 4.13.21
+# ImgTube
 
 Img Tube is a YouTube clone used to practice creating a rails project. 
 
-### **Deliverables**
-
+## Rails Validations - 4.13.21
 ---
+
+### **Deliverables**
 - Review:
     - routes
     - Quickly update search function
