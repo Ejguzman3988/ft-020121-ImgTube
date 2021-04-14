@@ -20,11 +20,14 @@ class ImagesController < ApplicationController
     
     def new
         @image = Image.new
+        @image.build_collage
     end
 
     def create
         @image = Image.new(image_params)
-
+        # What is happening on line 26?
+        # creating new image based on params I set.
+        # self.send("#{k}=", value)
         if @image.save
             redirect_to image_path(@image)
         else
@@ -63,6 +66,6 @@ class ImagesController < ApplicationController
     private
     #Strong Params
     def image_params
-        params.require(:image).permit(:title, :description, :image_url)
+        params.require(:image).permit(:title, :description, :image_url, :collage_id, collage_attributes: [:name, :description])
     end
 end

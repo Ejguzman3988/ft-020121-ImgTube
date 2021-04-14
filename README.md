@@ -9,6 +9,7 @@ Img Tube is a YouTube clone used to practice creating a rails project.
     - Add another model
     - Collage Model
         - Name
+        - Description
     - Quickly stub out associations
         - Collage has many Images
         - Image Belongs to a collage
@@ -22,6 +23,7 @@ Img Tube is a YouTube clone used to practice creating a rails project.
     - Create a nested form for playlist, add 3 images.
 * Resources
 - https://api.rubyonrails.org/v6.1.3.1/classes/ActiveRecord/NestedAttributes/ClassMethods.html
+- https://apidock.com/rails/ActionView/Helpers/FormOptionsHelper/collection_select  
 
 
 

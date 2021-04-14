@@ -1,0 +1,33 @@
+<h1> Create New Collage </h1>
+<% if @collage.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@collage.errors.count, "error") %> prohibited this collage from being saved:</h2>
+
+    <ul>
+      <% @collage.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+<%= form_with(model: @collage) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :description %>
+    <%= f.text_field :description %><br>
+    <h3> CREATE A NEW IMAGE</h3>
+    <%= f.fields_for :images do |i| %>
+      <%= i.label :title %>
+      <%= i.text_field :title %><br>
+      <%= i.label :description %>
+      <%= i.text_field :description %><br>
+      <%= i.label :image_url %>
+      <%= i.text_field :image_url %><br>
+      <hr>
+    <% end %>
+  
+    
+    <%= f.submit 'Create Collage' %>
+<% end %>
