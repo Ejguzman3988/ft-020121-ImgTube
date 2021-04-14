@@ -1,7 +1,7 @@
 class Image < ApplicationRecord
     validates :title, presence: true, uniqueness: {scope: :image_url, message: 'and Image Url are not'}
     validates :description, presence: true
-    validates :image_url, presence: true, image_url_format: {on: :create}
+    validates :image_url, presence: true, image_url_format: { on: :create }
     # validates :views, numericality: { less_than: 10 }
     # validate :too_many_images, on: :create
     
