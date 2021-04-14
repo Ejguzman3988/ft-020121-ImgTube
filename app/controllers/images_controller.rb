@@ -12,10 +12,10 @@ class ImagesController < ApplicationController
     def index
         @images = Image.all
     end
-
+    
     def show
         @image = Image.find_by(id: params[:id])
-        @image.update(views: @image.views+1)
+        @image.update(views: @image.views+1) 
     end
     
     def new

@@ -5,14 +5,25 @@ Img Tube is a YouTube clone used to practice creating a rails project.
 ## Rails Associations and Nested Forms - 4.14.21
 ---
 ### **Deliverables**
-- Add another model
-- collage Model
-    - Name
-- Quickly stub out associations
-    - collage has many Images
-    - Image Belongs to a collage
-    - Add collage_id to image
-- Create a collage index, show, and create
+- Set up
+    - Add another model
+    - Collage Model
+        - Name
+    - Quickly stub out associations
+        - Collage has many Images
+        - Image Belongs to a collage
+        - Add collage_id to image
+    - Create a Collage index, show, and create
+- Understand nested forms
+    - What happens during .new method?
+    - Create a nested form for Image.
+    - Allow a user to choose from a Playlist that already exists
+    - Create a custom attribute writer
+    - Create a nested form for playlist, add 3 images.
+* Resources
+- https://api.rubyonrails.org/v6.1.3.1/classes/ActiveRecord/NestedAttributes/ClassMethods.html
+
+
 
 
 
