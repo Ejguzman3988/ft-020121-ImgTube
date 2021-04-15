@@ -1,19 +1,9 @@
-<% if @image.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@image.errors.count, "error") %> prohibited this image from being saved:</h2>
-
-    <ul>
-      <% @image.errors.each do |error| %>
-        <li><%= error.full_message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+<%= render partial: 'errors/errors', locals: {model: @image} %>
 
 <%= image_tag(@image.image_url) %>
 <h1><%= @image.title %></h1>
 <div>
-    <p> <%= @image.uploaded_at %></p>
+    <p> <%= format_created_at(@image) %></p>
     <p> <%= @image.description %></p>
     <p> Views: <%= @image.views %></p>
     <p> Likes: <%= @image.likes %></p>

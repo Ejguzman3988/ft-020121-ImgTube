@@ -1,12 +1,14 @@
 <h1> EDIT A IMAGE </h1>
 
+<%= render partial: 'errors/errors', locals: {model: @image} %>
+
 <%= form_with(model: @image) do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+   <%= f.label :title %>
+    <%= f.text_field :title %><br>
     <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.text_field :description %><br>
     <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
+    <%= f.text_field :image_url %><br>
     <%= f.submit 'Update Image' %>
 <% end %>
 

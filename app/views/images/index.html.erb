@@ -1,7 +1,5 @@
 <h1> All Images </h1>
 
 <ul>
-<% @images.each do |img| %>
-    <li><%= link_to(img.title, image_path(img)) %> - <%= img.uploaded_at %></li>
-<% end %>
+    <%= render @images %>
 </ul>

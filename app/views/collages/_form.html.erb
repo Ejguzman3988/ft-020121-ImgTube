@@ -1,0 +1,19 @@
+<%= form_with(model: model) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :description %>
+    <%= f.text_field :description %><br>
+    <h3> <%= form_title %></h3>
+    <%= f.fields_for :images do |i| %>
+      <%= i.label :title %>
+      <%= i.text_field :title %><br>
+      <%= i.label :description %>
+      <%= i.text_field :description %><br>
+      <%= i.label :image_url %>
+      <%= i.text_field :image_url %><br>
+      <hr>
+    <% end %>
+  
+    
+    <%= f.submit button_name %>
+<% end %>
