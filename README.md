@@ -2,6 +2,33 @@
 
 Img Tube is a YouTube clone used to practice creating a rails project. 
 
+## Rails Refactoring w/ Layouts, Partials, and Helpers - 4.15.21
+---
+### **Deliverables**
+
+- Quickly add a logo using draw.io
+- Talk about some google sheets
+    - Sheets for Nested Forms (In Progress)
+    - Jenn's Sheet
+- Our process
+    - Start w/ partials. 
+        - Use Partial to style our website (Nav Bar) - (Side Bar)
+        - Use Partial to Get rid of duplicate forms 
+        - Which forms?
+            - New form - Image new
+            - Edit Form - no edit for collage. Image edit
+            
+        - Take a look at collections rendering for partials.
+    - Layouts
+        - Use Partials to render different layouts
+        - ImgTube vs ImgStudio
+    - Helper for DateTime Object
+        - Create a helper that will format our DateTime objects for created at
+        - Difference in the index, and the show
+- Scope
+    - What its used for?
+    - Refactor our class methods inside of our imaage controller
+
 ## Rails Associations and Nested Forms - 4.14.21
 ---
 ### **Deliverables**

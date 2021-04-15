@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+    
 
     def search
         @images = Image.search(params[:title])
@@ -21,6 +22,7 @@ class ImagesController < ApplicationController
     def new
         @image = Image.new
         @image.build_collage
+        render layout: 'studio'
     end
 
     def create
@@ -36,12 +38,13 @@ class ImagesController < ApplicationController
             # @image.errors
             # TODO: add some flash messaging
 
-            render :new
+            render :new, layout: "studio"
         end
     end
 
     def edit
         @image = Image.find_by(id: params[:id] )
+        render layout: 'studio'
     end
 
     def update
@@ -52,7 +55,7 @@ class ImagesController < ApplicationController
             redirect_to image_path(@image)
         else
             #TODO: ERROR MESSAGES
-            render :edit
+            render :edit, layout: 'studio'
         end
     end
 

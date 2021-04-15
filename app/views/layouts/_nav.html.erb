@@ -1,0 +1,16 @@
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <%= image_tag('logo.png', width: '60px', height: '30px') %>
+        <%= logo_name %>
+      </a>
+        <%= form_with(url: search_path, method: 'get', class: 'd-flex') do |f|%>
+          <%= f.text_field :title, class: "form-control me-2", placeholder: "Search for Title" %>
+          <%= f.submit :Search, class: "btn btn-outline-success" %>
+        <% end %>
+      
+  </nav>
+    
