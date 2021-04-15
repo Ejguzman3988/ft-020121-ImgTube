@@ -29,6 +29,12 @@
           <li>
             <%= link_to 'Most Recent PATH', recent_path, class: 'nav-link active' %>
           </li>
+          <li>
+            <%= link_to 'All Collages', collages_path, class: 'nav-link active' %>
+          </li>
+          <li>
+            <%= link_to 'New Collage Path', new_collage_path, class: 'nav-link active' %>
+          </li>
         </ul>
         <%= form_with(url: search_path, method: 'get', class: 'd-flex') do |f|%>
           <%= f.text_field :title, class: "form-control me-2", placeholder: "Search for Title" %>
