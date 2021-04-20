@@ -1,4 +1,23 @@
 module ImagesHelper
+    def fields_for_helper(f)
+        if @collage
+            f.hidden_field :collage_id, value: @collage.id 
+        else 
+            render partial: "fields_for", locals: {f: f}  
+        end 
+
+    end
+    
+    def index_header
+        if @collage 
+            content_tag(:h1, "#{@collage.name} images")
+        else 
+            content_tag(:h1, "All Images")
+        end 
+    end
+
+
+
     def index_date_format(image)
         created = image.created_at.to_datetime
         now = DateTime.now

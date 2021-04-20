@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :collages
+  # /collages/:collage_id
+  resources :collages do
+    resources :images, only: [:index, :new, :create]
+  end
+  
+  resources :images 
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   
   # get '/images', to: 'images#index' # index - list all images
@@ -13,9 +19,6 @@ Rails.application.routes.draw do
   # delete '/images/:id', to: 'images#destroy' #destroy
  
   # get '/images/:id', to: 'images#show', as: 'image' # show
-
-  resources :images
-
   #custom route                     
   get '/most_recent', to: 'images#most_recent', as: 'recent'
   get '/search', to: 'images#search', as: 'search'

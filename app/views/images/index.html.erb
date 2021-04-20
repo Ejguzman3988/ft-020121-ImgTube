@@ -1,5 +1,5 @@
-<h1> All Images </h1>
-
+<%= index_header %>
+<%= link_to "MAKES NEW IMAGE FOR COLLAGE", new_collage_image_path(@collage) if @collage %>
 <ul>
     <%= render @images %>
 </ul>

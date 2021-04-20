@@ -1,6 +1,27 @@
 # ImgTube
 
-Img Tube is a YouTube clone used to practice creating a rails project. 
+Img Tube is a YouTube clone used to practice creating a rails project.
+
+## Rails Nested Resources - 4.20.21
+---
+### Deliverables
+
+* Talk about requirements
+    - Nested Resources vs Nested Forms
+    - slide 
+        - https://docs.google.com/presentation/d/1UdtQOFx4DAlUN0o1v0RDyydIJfSQdIN1WZJbrb9_kJQ/edit
+    - requirements 
+        - https://learning.flatironschool.com/courses/2612/pages/build-a-rails-app?module_item_id=148292
+    - Get rid of dark mode LOL
+        - d-flex for navbar 
+* How do we add Nested Resource
+    - config/routes.rb
+* Implement usage
+    - index
+    - new
+* Bonus resource
+    - content tag
+    - https://apidock.com/rails/ActionView/Helpers/TagHelper/content_tag
 
 ## Rails Refactoring w/ Layouts, Partials, and Helpers - 4.15.21
 ---

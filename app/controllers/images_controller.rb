@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-    
+    before_action :find_collage, only: [:index, :new, :create]
 
     def search
         @images = Image.search(params[:title])
@@ -11,7 +11,11 @@ class ImagesController < ApplicationController
     end
 
     def index
-        @images = Image.all
+        if @collage
+            @images = @collage.images
+        else
+            @images = Image.all
+        end
     end
     
     def show
@@ -20,24 +24,39 @@ class ImagesController < ApplicationController
     end
     
     def new
-        @image = Image.new
-        @image.build_collage
+        if @collage
+            @image = @collage.images.build
+        else
+            @image = Image.new
+            @image.build_collage
+        end
+
         render layout: 'studio'
     end
 
     def create
+        # if @collage
+        #     @image = @collage.images.build(image_params)
+        # else
+        #     @image = Image.new(image_params)
+            
+        # end
         @image = Image.new(image_params)
         # What is happening on line 26?
         # creating new image based on params I set.
         # self.send("#{k}=", value)
         if @image.save
-            redirect_to image_path(@image)
+            if @collage
+                redirect_to collage_images_path(@collage)
+            else
+                redirect_to image_path(@image)
+            end
         else
             # implement some error handling
             # If it doesnt save
             # @image.errors
             # TODO: add some flash messaging
-
+            
             render :new, layout: "studio"
         end
     end
@@ -70,5 +89,10 @@ class ImagesController < ApplicationController
     #Strong Params
     def image_params
         params.require(:image).permit(:title, :description, :image_url, :collage_id, collage_attributes: [:name, :description])
+    end
+
+    def find_collage
+        @collage = Collage.find_by_id(params[:collage_id])
+        #@collage = Collage.find(params[:collage_id]) # will error if id does not exist
     end
 end
