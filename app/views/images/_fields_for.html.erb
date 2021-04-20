@@ -1,0 +1,12 @@
+<h3> SELECT A EXISTING COLLAGE </h3>
+<%#= collection_select(:post, :author_id, Author.all, :id, :name_with_initial, prompt: true) %>
+<%= f.collection_select(:collage_id, Collage.all, :id, :name) %>
+
+<h3> CREATE A NEW COLLAGE</h3>
+<%#= name, description %>
+<%= f.fields_for :collage do |c| %>
+    <%= c.label :name %>
+    <%= c.text_field :name %><br>
+    <%= c.label :description %>
+    <%= c.text_field :description %><br>
+<% end %>

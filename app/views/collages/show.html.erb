@@ -1,14 +1,3 @@
-<% if @collage.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@collage.errors.count, "error") %> prohibited this collage from being saved:</h2>
-
-    <ul>
-      <% @collage.errors.each do |error| %>
-        <li><%= error.full_message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
 
 <h1><%= @collage.name %></h1>
 <div>
@@ -16,9 +5,10 @@
 </div>
 
 <h1>THIS COLLAGES IMAGES: </h1>
+<%= link_to "Takes us to collage Images path", collage_images_path(@collage) %>
 <ul>
 <% @collage.images.each do |img| %>
-    <li><%= link_to(img.title, image_path(img)) %> - <%= img.uploaded_at %></li>
+    <li><%= link_to(img.title, image_path(img)) %> - <%= index_date_format(img) %></li>
 <% end %>
 </ul>
 
