@@ -6,25 +6,31 @@ Img Tube is a YouTube clone used to practice creating a rails project.
 ---
 ### Questions
 
-- What is authentication?
-- What is the difference between authentication and authorization?
 - How are passwords stored?
-- How do we allow a user to sign up? To sign in?
+    - bcrypt
+        - https://github.com/bcrypt-ruby/bcrypt-ruby
+    - has_secure_password
+    - password_digest
+        - https://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html
+        - https://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html
+
 - How does an application keep you logged in between requests?
+    - sessions/cookies
+    - What are http requests? Do they carry over information?
+    - https://guides.rubyonrails.org/action_controller_overview.html#session
 
 ### Deliverables
 
 - Scope Methods 
     - convert our class methods to scope methods
     - Difference between Query methods and Native Ruby Methods
-<<<<<<< HEAD
-=======
     - Requirement 4
     - https://learning.flatironschool.com/courses/2612/pages/build-a-rails-app?module_item_id=148292
->>>>>>> master
 - Authentication
     - Create our User
     - Acknowledge some changes
+        - Added a users controller
+        - Added Views - Stubbed out Sign Up Form
     - Create signup/login forms
     - Implement Omniauth w/ Google
 - Implement many to many w/ comments 

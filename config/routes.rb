@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  root('static#home')
   # /collages/:collage_id
   resources :collages do
     resources :images, only: [:index, :new, :create]
