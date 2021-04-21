@@ -3,18 +3,20 @@ class Image < ApplicationRecord
     validates :description, presence: true
     validates :image_url, presence: true, image_url_format: { on: :create }
     belongs_to :collage, optional: true # collage= COLLAGE OBJECT
-
-    # accepts_nested_attributes_for :collage
-    # collage_attributes=(attributes) 
-
+    
+    scope :search, -> (query) { self.where("title LIKE ?", "%#{query}%") }
+    scope :most_recent, -> { order created_at: :desc }
+    
     def collage_attributes=(attributes)
-
+        
         if !(attributes[:name].blank? || attributes[:description].blank?)
             self.collage = Collage.find_or_create_by(attributes)
         end
     end
-
-
+    
+    # accepts_nested_attributes_for :collage
+    # collage_attributes=(attributes) 
+    
     # validates :views, numericality: { less_than: 10 }
     # validate :too_many_images, on: :create
     
@@ -32,12 +34,16 @@ class Image < ApplicationRecord
     
     
     # TODO: Refactor to scope method
-    def self.search(query)
-        self.where("title LIKE ?", "%#{query}%")
-    end
 
-    def self.most_recent
-        self.order(created_at: :desc)
-    end
+    #scope :costs_more_than, ->(amount) { where("price > ?", amount) }
+
+    # def self.search(query)
+    #     self.where("title LIKE ?", "%#{query}%")
+    # end
+    # scope :most_recent, { self.order(created_at: :desc)}
+
+    # def self.most_recent
+    #     self.order(created_at: :desc)
+    # end
 end
 

@@ -7,6 +7,7 @@ class ImagesController < ApplicationController
     end
 
     def most_recent
+      
         @images = Image.most_recent
     end
 

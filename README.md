@@ -12,7 +12,7 @@ Img Tube is a YouTube clone used to practice creating a rails project.
     - has_secure_password
     - password_digest
         - https://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html
-        - https://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html
+        - https://guides.rubyonrails.org/active_model_basics.html
 
 - How does an application keep you logged in between requests?
     - sessions/cookies
