@@ -33,7 +33,7 @@ Img Tube is a YouTube clone used to practice creating a rails project.
         - Added Views - Stubbed out Sign Up Form
     - Create signup/login forms
     - config/routes
-- Implement Omniauth w/ Google
+- Implement Omniauth w/ Google -- GITHUB IS EASIEST
     - https://github.com/zquestz/omniauth-google-oauth2
     - https://github.com/bkeepers/dotenv
     - https://github.com/cookpad/omniauth-rails_csrf_protection

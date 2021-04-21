@@ -58,3 +58,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "faker", "~> 2.17"
 
 gem "pry", "~> 0.14.0"
+
+gem 'dotenv-rails'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"

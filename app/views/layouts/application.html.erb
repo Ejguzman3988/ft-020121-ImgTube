@@ -20,6 +20,7 @@
           <%= render partial: "layouts/sidebar" %>
         </div>
         <div class="col-8">
+          <%= flash[:message]%>
           <%= yield %>
         </div>
       </div>
