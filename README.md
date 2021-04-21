@@ -1,7 +1,36 @@
 # ImgTube
 
 Img Tube is a YouTube clone used to practice creating a rails project.
+# Current Lecture
+## Rails Authentication 
+---
+### Questions
 
+- What is authentication?
+- What is the difference between authentication and authorization?
+- How are passwords stored?
+- How do we allow a user to sign up? To sign in?
+- How does an application keep you logged in between requests?
+
+### Deliverables
+
+- Scope Methods 
+    - convert our class methods to scope methods
+    - Difference between Query methods and Native Ruby Methods
+    - Requirement 4
+    - https://learning.flatironschool.com/courses/2612/pages/build-a-rails-app?module_item_id=148292
+- Authentication
+    - Create our User
+    - Acknowledge some changes
+    - Create signup/login forms
+    - Implement Omniauth w/ Google
+- Implement many to many w/ comments 
+    - Probably move this to Friday
+    - Chill lecture add a bit of styling and association manipulation
+
+
+
+# PAST LECTURES
 ## Rails Nested Resources - 4.20.21
 ---
 ### Deliverables
