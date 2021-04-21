@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  get '/signup', to: 'users#new'
+  post '/signup', to: 'users#create'
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+
+  delete '/logout', to: "sessions#logout"
+
+  get '/auth/google_oauth2/callback', to: 'sessions#omniauth'
+
+  root('static#home')
   # /collages/:collage_id
   resources :collages do
     resources :images, only: [:index, :new, :create]

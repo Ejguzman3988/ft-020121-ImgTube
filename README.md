@@ -1,7 +1,53 @@
 # ImgTube
 
 Img Tube is a YouTube clone used to practice creating a rails project.
+# Current Lecture
+## Rails Authentication 
+---
+### Questions
 
+- How are passwords stored?
+    - bcrypt
+        - https://github.com/bcrypt-ruby/bcrypt-ruby
+    - has_secure_password
+    - password_digest
+        - https://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html
+        - https://guides.rubyonrails.org/active_model_basics.html
+
+- How does an application keep you logged in between requests?
+    - sessions/cookies
+    - What are http requests? Do they carry over information?
+    - https://guides.rubyonrails.org/action_controller_overview.html#session
+
+### Deliverables
+
+- Scope Methods 
+    - convert our class methods to scope methods
+    - Difference between Query methods and Native Ruby Methods
+    - Requirement 4
+    - https://learning.flatironschool.com/courses/2612/pages/build-a-rails-app?module_item_id=148292
+- Authentication
+    - Create our User
+    - Acknowledge some changes
+        - Added a users controller
+        - Added Views - Stubbed out Sign Up Form
+    - Create signup/login forms
+    - config/routes
+- Implement Omniauth w/ Google -- GITHUB IS EASIEST
+    - https://github.com/zquestz/omniauth-google-oauth2
+    - https://github.com/bkeepers/dotenv
+    - https://github.com/cookpad/omniauth-rails_csrf_protection
+    - If rails csrf doesnt not fix your error, come to OOH we can talk about a fix.
+
+
+- Implement many to many w/ comments*
+    - Avi Video - Understanding join tables
+    - https://www.youtube.com/watch?v=qfB1MRnzk4g
+    * This video was available during Sinatra ^
+
+* If we dont finish I will continue tomorrow.
+
+# PAST LECTURES
 ## Rails Nested Resources - 4.20.21
 ---
 ### Deliverables

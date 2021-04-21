@@ -5,17 +5,33 @@
             <a class="nav-link active" aria-current="page" href="/images">Home</a>
         </li>
         <li>
-            <%= link_to 'Create New Image', new_image_path, class: 'nav-link active' %>
-        </li>
-        <li>
             <%= link_to 'Most Recent PATH', recent_path, class: 'nav-link active' %>
         </li>
         <li>
             <%= link_to 'All Collages', collages_path, class: 'nav-link active' %>
         </li>
-        <li>
-            <%= link_to 'New Collage Path', new_collage_path, class: 'nav-link active' %>
-        </li>
+        <% if logged_in? %>
+            <li>
+                <%= link_to 'Create New Image', new_image_path, class: 'nav-link active' %>
+            </li>
+            <li>
+                <%= link_to 'New Collage Path', new_collage_path, class: 'nav-link active' %>
+            </li>
+            <li>
+                <%= link_to 'LOGOUT', logout_path, class: 'nav-link active', method: 'delete' %>
+            </li>
+        <% else %>
+            <li>
+                <%= link_to 'LOGIN', login_path, class: 'nav-link active' %>
+            </li>
+            <li>
+                <%= link_to 'SIGNUP', signup_path, class: 'nav-link active' %>
+            </li>
+            <li>
+                <%= link_to 'LOGIN WITH GOOGLE', "/auth/google_oauth2", class: 'nav-link active', method: "post" %>
+            </li>
+        <% end %>
+
         </ul>
     </div>
 </nav>

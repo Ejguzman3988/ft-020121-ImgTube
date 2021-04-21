@@ -1,4 +1,5 @@
 class ImagesController < ApplicationController
+    before_action :redirect_if_not_logged_in, only: [:new, :create, :edit, :update]
     before_action :find_collage, only: [:index, :new, :create]
 
     def search
@@ -7,6 +8,7 @@ class ImagesController < ApplicationController
     end
 
     def most_recent
+      
         @images = Image.most_recent
     end
 
