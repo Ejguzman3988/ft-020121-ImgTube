@@ -17,6 +17,11 @@ Img Tube is a YouTube clone used to practice creating a rails project.
 - Scope Methods 
     - convert our class methods to scope methods
     - Difference between Query methods and Native Ruby Methods
+<<<<<<< HEAD
+=======
+    - Requirement 4
+    - https://learning.flatironschool.com/courses/2612/pages/build-a-rails-app?module_item_id=148292
+>>>>>>> master
 - Authentication
     - Create our User
     - Acknowledge some changes
