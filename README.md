@@ -32,12 +32,18 @@ Img Tube is a YouTube clone used to practice creating a rails project.
         - Added a users controller
         - Added Views - Stubbed out Sign Up Form
     - Create signup/login forms
-    - Implement Omniauth w/ Google
-- Implement many to many w/ comments 
-    - Probably move this to Friday
-    - Chill lecture add a bit of styling and association manipulation
+- Implement Omniauth w/ Google
+    - https://github.com/zquestz/omniauth-google-oauth2
+    - https://github.com/cookpad/omniauth-rails_csrf_protection
+    - https://github.com/bkeepers/dotenv
 
 
+- Implement many to many w/ comments*
+    - Avi Video - Understanding join tables
+    - https://www.youtube.com/watch?v=qfB1MRnzk4g
+    * This video was available during Sinatra ^
+
+* If we dont finish I will continue tomorrow.
 
 # PAST LECTURES
 ## Rails Nested Resources - 4.20.21
