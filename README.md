@@ -32,10 +32,12 @@ Img Tube is a YouTube clone used to practice creating a rails project.
         - Added a users controller
         - Added Views - Stubbed out Sign Up Form
     - Create signup/login forms
+    - config/routes
 - Implement Omniauth w/ Google
     - https://github.com/zquestz/omniauth-google-oauth2
-    - https://github.com/cookpad/omniauth-rails_csrf_protection
     - https://github.com/bkeepers/dotenv
+    - https://github.com/cookpad/omniauth-rails_csrf_protection
+    - If rails csrf doesnt not fix your error, come to OOH we can talk about a fix.
 
 
 - Implement many to many w/ comments*
