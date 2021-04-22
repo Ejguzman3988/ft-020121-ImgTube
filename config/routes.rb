@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
 
@@ -8,7 +9,9 @@ Rails.application.routes.draw do
   delete '/logout', to: "sessions#logout"
 
   get '/auth/google_oauth2/callback', to: 'sessions#omniauth'
-
+  get '/most_recent', to: 'images#most_recent', as: 'recent'
+  get '/search', to: 'images#search', as: 'search'
+  
   root('static#home')
   # /collages/:collage_id
   resources :collages do
@@ -31,8 +34,6 @@ Rails.application.routes.draw do
  
   # get '/images/:id', to: 'images#show', as: 'image' # show
   #custom route                     
-  get '/most_recent', to: 'images#most_recent', as: 'recent'
-  get '/search', to: 'images#search', as: 'search'
   # as: 'recent' => recent_path
   # recent_path = '/most_recent'
 
