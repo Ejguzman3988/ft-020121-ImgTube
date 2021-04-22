@@ -4,23 +4,47 @@ Img Tube is a YouTube clone used to practice creating a rails project.
 # Current Lecture
 ---
 
+USER
+IMAGE
+COMMENT
+    - Form should be in show for the image
+         - get new comment? 
+         - image show page
+    - get request for index?
+        - images show apge
+    - get for show comment?
+        - we are using index to show comment
+    - post comment
+
+
+
 ## Rails Project Prep - 4.22.21
 
 ### Deliverables
-1. Add missing requirement
+
+1. How best to prepare for your upcoming project
+    - Phase 4 will be available Monday
+    - How to look through lectures and find specific content
+    - Using deliverables to find the correct video
+
+2. Talk about project prep.
+    - Step by Step each requirement
+    - Questions
+
+3. Add missing requirement
     - We are missing our many to many
     - User submittable Attribute
     - Show how to set a different has many
         - https://guides.rubyonrails.org/association_basics.html#options-for-has-many-foreign-key
         - Example
             - https://stackoverflow.com/questions/26027928/how-to-specify-has-many-through-vs-has-many
-2. Talk about project prep.
-    - Step by Step each requirement
-    - Questions
-3. How best to prepare for your upcoming project
-    - Phase 4 will be available Monday
-    - How to look through lectures and find specific content
-    - Using deliverables to find the correct video
+
+4. Implement many to many w/ comments*
+    - Avi Video - Understanding join tables
+    - https://www.youtube.com/watch?v=qfB1MRnzk4g
+    * This video was available during Sinatra ^
+
+* If we dont finish I will continue tomorrow.
 
 # PAST LECTURES
 

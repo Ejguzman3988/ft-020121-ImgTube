@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
 
@@ -13,12 +14,18 @@ Rails.application.routes.draw do
   get '/search', to: 'images#search', as: 'search'
   
   root('static#home')
-  # /collages/:collage_id
+  # /collages/:collage_id/images/new
+  # /collages/:collage_id/images
+
   resources :collages do
     resources :images, only: [:index, :new, :create]
   end
   
-  resources :images 
+  # NESTED route
+  # post '/images/:image_id/comments', to: 'comments#create'
+  resources :images do
+    resources :comments, only: [:create]
+  end
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   

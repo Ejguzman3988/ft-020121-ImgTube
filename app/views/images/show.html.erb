@@ -12,3 +12,29 @@
 
 <%= link_to 'back', images_path %>
 <%= link_to 'Edit', edit_image_path(@image) %>
+
+<%#=  Could use partial so that you can put this in comment comments/_form %>
+<%= form_with(model: [@image, @comment]) do |f| %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :image_id, value: @image.id %>
+    <%= f.text_area :content %>
+    <%= f.submit :comment %>
+<% end %>
+
+COMMENTS:
+<ul>   
+    <%# This one needs partial %>
+    <%# <%= render @comments  %>
+
+    <%# This one has a small bug, where it renders alot and slows down  page %>
+    <%#= @comments.each do |comment| %>
+        <%#= render partial: 'comments/comment' %>
+    <%# end %>
+
+    <%# This is what the above does! %>
+    <%= @comments.each do |comment| %>
+        <li>
+            <%= comment.user.name %> - <%= comment.content %>
+        </li>
+    <% end %>
+</ul>
