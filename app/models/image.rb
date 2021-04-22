@@ -1,8 +1,15 @@
 class Image < ApplicationRecord
+    belongs_to :collage, optional: true # collage= COLLAGE OBJECT
+    
+    
+    
+    
+    
+    
+    
     validates :title, presence: true, uniqueness: {scope: :image_url, message: 'and Image Url are not UNIQUE'}
     validates :description, presence: true
     validates :image_url, presence: true, image_url_format: { on: :create }
-    belongs_to :collage, optional: true # collage= COLLAGE OBJECT
     
     scope :search, -> (query) { self.where("title LIKE ?", "%#{query}%") }
     scope :most_recent, -> { order created_at: :desc }

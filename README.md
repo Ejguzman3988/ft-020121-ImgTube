@@ -2,8 +2,29 @@
 
 Img Tube is a YouTube clone used to practice creating a rails project.
 # Current Lecture
-## Rails Authentication 
 ---
+
+## Rails Project Prep - 4.22.21
+
+### Deliverables
+1. Add missing requirement
+    - We are missing our many to many
+    - User submittable Attribute
+    - Show how to set a different has many
+        - https://guides.rubyonrails.org/association_basics.html#options-for-has-many-foreign-key
+        - Example
+            - https://stackoverflow.com/questions/26027928/how-to-specify-has-many-through-vs-has-many
+2. Talk about project prep.
+    - Step by Step each requirement
+    - Questions
+3. How best to prepare for your upcoming project
+    - Phase 4 will be available Monday
+    - How to look through lectures and find specific content
+    - Using deliverables to find the correct video
+
+# PAST LECTURES
+
+## Rails Authentication - 4.21.21
 ### Questions
 
 - How are passwords stored?
@@ -47,7 +68,6 @@ Img Tube is a YouTube clone used to practice creating a rails project.
 
 * If we dont finish I will continue tomorrow.
 
-# PAST LECTURES
 ## Rails Nested Resources - 4.20.21
 ---
 ### Deliverables
