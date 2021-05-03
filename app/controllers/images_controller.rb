@@ -23,9 +23,10 @@ class ImagesController < ApplicationController
     def show
         @image = Image.find_by(id: params[:id])
         @comments = @image.comments
-        @comment = @image.comments.build(user_id: current_user.id)
+        @comment = Comment.new(user_id: current_user.id)
         @image.update(views: @image.views+1) 
-
+    
+        
     end
     
     def new

@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 2021_04_22_160024) do
     t.integer "dislikes", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "collage_id"
     t.integer "user_id"
   end
 

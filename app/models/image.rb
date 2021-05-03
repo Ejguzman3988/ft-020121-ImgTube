@@ -1,6 +1,6 @@
 class Image < ApplicationRecord
     belongs_to :collage, optional: true # collage= COLLAGE OBJECT
-    belongs_to :user
+    belongs_to :user, optional: true
     
     
     has_many :comments

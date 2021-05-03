@@ -1,5 +1,10 @@
 <h1> Most Recent </h1>
 
-<ul>
-    <%= render @images %>
-</ul>
+<div class="container">
+    <%# @images.each do |image|} %>
+        <%#= render partial: 'image' %>
+    <%# end %>
+    <div class="row">
+        <%= render @images %>
+    </div>
+</div>

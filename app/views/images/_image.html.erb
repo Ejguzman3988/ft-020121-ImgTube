@@ -1,1 +1,23 @@
-<li><%= link_to(image.title, image_path(image)) %> - <%= index_date_format(image) %></li>
+<div class="">
+    <div class="card" style="width: 18rem;">
+        <%= image_tag(image.image_url, class: "card-img-top") %>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-1">
+                    <i class="bi bi-emoji-smile"></i>
+                </div>
+                
+                <div class="col">
+                    <h5 class="card-title">
+                        <%= link_to(image.title, image_path(image), style: "text-decoration:none") %> 
+                    </h5>
+                    <%= image.user.name%> <br>
+                    <p class="card-text">
+                        <%= image.views %> views &#8226; <%= index_date_format(image) %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div> 
